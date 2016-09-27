@@ -1,0 +1,10 @@
+if [ -d ~/Dropbox/firefox/ ]; then
+  cp -a ~/Dropbox/firefox/logins.json ~/.mozilla/firefox/*.default/
+  cp -a ~/Dropbox/firefox/key3.db ~/.mozilla/firefox/*.default/
+fi
+/usr/lib/firefox/firefox.sh $*
+if [ -d ~/Dropbox/firefox/ ]; then
+  cp -a ~/.mozilla/firefox/*.default/logins.json ~/Dropbox/firefox/
+  cp -a ~/.mozilla/firefox/*.default/key3.db ~/Dropbox/firefox/
+fi
+
